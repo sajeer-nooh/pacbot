@@ -117,7 +117,7 @@ public class NotificationController implements Constants
 					mailTemplateRequestBody.getPlaceholderValues(), mailTemplateRequestBody.getAttachmentUrl(), false);
 			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (Exception exception) {
-			log.error(EXE_EMAIL_SEND , exception);
+			log.error(EXE_TEMPLATE_EMAIL_SEND , exception);
 			try {
 				
 				log.info("fromAddress in catch block==sendMailWithTemplate from config {}",fromAddress);
@@ -130,7 +130,7 @@ public class NotificationController implements Constants
 						mailTemplateRequestBody.getPlaceholderValues(), mailTemplateRequestBody.getAttachmentUrl(), false);
 				return new ResponseEntity<>(HttpStatus.OK);
 			} catch (Exception e) {
-				log.error(EXE_EMAIL_SEND , e);
+				log.error("Inner "+EXE_TEMPLATE_EMAIL_SEND , e);
 				return new ResponseEntity<>(HttpStatus.FORBIDDEN);
 			}
 		}
