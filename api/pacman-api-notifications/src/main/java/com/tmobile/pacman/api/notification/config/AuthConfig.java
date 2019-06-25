@@ -74,7 +74,7 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
 	    return new RequestInterceptor() {
 	        @Override
 	        public void apply(RequestTemplate requestTemplate) {
-	        	LOGGER.info("SecurityContextHolder.getContext() ============== {}",SecurityContextHolder.getContext());
+	        	LOGGER.info("SecurityContextHolder.getContext()---- ============== {}",SecurityContextHolder.getContext());
 	            OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) SecurityContextHolder.getContext().getAuthentication().getDetails();
 	            requestTemplate.header("Authorization", "bearer " + details.getTokenValue());
 	        }
