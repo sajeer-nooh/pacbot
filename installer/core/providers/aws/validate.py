@@ -164,8 +164,7 @@ class SystemValidation(MsgMixin, metaclass=ABCMeta):
     def validate_system_config(self):
         """
         Validate the system configuration requirements
-        Minimum RAM : 3.5 GB
-        Minimum Available Storage : 8GB
+        Minimum RAM and Storage Validation
 
         Returns:
             valid or not_valid (str): Configured string for valid and not valid conditions
