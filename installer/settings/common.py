@@ -83,6 +83,10 @@ AWS_ACCESS_KEY = ""
 AWS_SECRET_KEY = ""
 AWS_REGION = ""
 
+#System Requirements (RAM and Storage)
+MINIMUM_RAM = 3.5
+MINIMUM_STORAGE = 8
+
 VPC = {
     "ID": "vpc-1",
     "CIDR_BLOCKS": ["10.0.0.0/16"],
